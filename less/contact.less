@@ -1,0 +1,57 @@
+#contact {
+	.page-title {
+		background-image: url(../img/contact-bg.png);
+		background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: 50%;
+	}
+	.page-content > section:last-child {
+		padding-top: 0;
+	}
+	.form {
+		input, textarea, button {
+			border-radius: 20px;
+		    margin-bottom: 8px;
+		}
+		input {
+			padding: 20px;
+		}
+		textarea {
+			padding: 0 20px;
+		}
+		button {
+			padding: 8px 20px;
+		}
+	}
+	#footer {
+		h5 {
+			text-transform: uppercase;
+		}
+		.contact {
+			text-align: right;
+			p {
+				display: inline-block;
+			}
+			.map {
+				margin-top: 60px;
+				i {
+					position: relative;
+				    bottom: 20px;
+				}
+			}
+			.contact-info {
+				padding-top: 8px;
+			}
+		}
+		.payment-methods, .copyright {
+			text-align: center;
+			padding-bottom: 15px;
+		}
+	}
+	@media (min-width: 1200px) {
+		.form {
+			padding-left: 80px;
+			padding-right: 80px;
+		}
+	}
+}
