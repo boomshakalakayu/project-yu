@@ -1,0 +1,187 @@
+#blog-detail {
+	.breadcrumb {
+		margin: 0;
+		padding: 0;
+	}
+	.heading-bar {
+		padding: 10px;
+		margin-bottom: 30px;
+		background: #eee;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	.right {
+		display: flex;
+		.search {
+			margin-right: 20px;
+		}
+	}
+	.article-img {
+		position: relative;
+		.wrapper {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 5%;
+		}
+		.wrapper-inner {
+			position: relative;
+		}
+		.info-tab {
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 12px;
+		}
+	}
+	.article {
+		position: relative;
+	    top: -80px;
+	    background: #fff;
+	    padding: 30px;
+	    .info-tab a {
+			color: #494949;
+			transition: all .3s;
+			&:hover {
+				color: #919191;
+			}
+	    }
+	}
+	.comment-area {
+		img {
+			width: auto;
+		}
+	}
+	.photo-group {
+		padding-bottom: 30px;
+	}
+	.photo-col {
+		display: flex;
+	    flex-flow: column wrap;
+	    align-content: center;
+	    li {
+	    	padding-right: 10px;
+	    	padding-bottom: 10px;
+	    }
+	}
+	.author {
+		padding: 40px;
+	    display: flex;
+	    background: #f4f4f4;
+	}
+	.author-intro {
+		padding-top: 10px;
+		padding-left: 20px;
+		color: #898989;
+		p {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		li {
+			padding-right: 5px;
+		}
+	}
+	.comment-area > div {
+		margin-bottom: 100px;
+		.title-bl {
+			margin-bottom: 30px;
+		}
+	}
+	.comment, .comment-rp {
+		display: flex;
+	    padding: 20px;
+	    color: #858585;
+	    .time {
+	    	color: #171717;
+	    }
+	}
+	.comments {
+		p {
+			margin-top: 10px;
+		    margin-bottom: 40px;
+		}
+		hr {
+			width: 80%;
+		}
+		.name {
+			font-weight: 700;
+		}
+		.time {
+			font-size: 12px;
+			font-style: italic;
+		}
+	}
+	.comment-rp {
+		margin-left: calc(65px + 1rem);
+	}
+	.comment-form {
+		form > div {
+			margin-bottom: 10px;
+		}
+		.form-control {
+			border: 0;
+			background: #f7f7f7;
+			padding: 20px;
+		}
+		.input {
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+		.input-item {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		input, textarea, button {
+			text-transform: capitalize;
+			color: #757575;
+			font-size: 14px;
+		}
+	}
+	@media (max-width: 992px) {
+		.comment-area {
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+	}
+	@media (max-width: 768px) {
+		.article {
+			margin-left: 10px;
+			margin-right: 10px;
+			top: -30px;
+		}
+		.comment-area {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.input-item {
+			margin-bottom: 10px;
+		}
+	}
+	@media (max-width: 576px) {
+		.wrapper .date { 
+			padding: 5px 10px;
+		}
+		.comment-area {
+			margin: 0;
+		}
+		.author {
+			flex-flow: column;
+		    text-align: center;
+		}
+		.comment-rp {
+			margin-left: 1rem;
+		}
+	}
+	@media (min-width: 576px) {
+		.photo-col {
+			max-height: 700px;
+		}
+	}
+	@media (min-width: 992px ) {
+		.photo-col {
+			max-height: 500px;
+		}
+	}
+}

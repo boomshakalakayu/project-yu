@@ -1,5 +1,8 @@
 #index {
 /*custom*/
+	#content img {
+		height: 100%;
+	}
 	.price {
 		font-size: 27px;
 		letter-spacing: -2px;
@@ -265,7 +268,7 @@
 			color: #5a5a5a;
 		}
 		.text {
-			width: 400px;
+			width: 70%;
 		}
 		span {
 			font-weight: 300;
@@ -403,6 +406,11 @@
 		}
 		.info-bottom {
 			padding-top: 30px;
+		}
+	}
+	@media (max-width: 992px) {
+		.dark, .cart-total {
+			display: none;
 		}
 	}
 }

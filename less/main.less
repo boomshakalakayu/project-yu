@@ -1,7 +1,20 @@
 @import "index.less";
 @import "about.less";
 @import "contact.less";
-
+@import "blog.less";
+@import "blog_detail.less";
+/*custom*/
+hr {
+	margin: 0;
+}
+.mx_50 {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.mx_80{
+	margin-left: 145px;
+	margin-right: 145px;
+}
 .clearfix {
 	display: flow-root;
 }
@@ -10,6 +23,7 @@ ul, li, a {
 	padding: 0;
 	list-style-type: none;
 }
+
 a {
 	text-decoration: none;
 	color: #4b4b4b;
@@ -34,7 +48,7 @@ p {
 }
 #content img {
 	width: 100%;
-	height: 100%;
+	height: auto;
 }
 .page-content > section {
 	padding: 80px 0;
@@ -54,10 +68,59 @@ p {
 		font-size: 18px;
 	}
 }
-
-/*custom*/
 .title {
 	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+button {
+	background: transparent;
+	border: 0;
+	&:focus {
+		outline: none;
+	}
+}
+#blog, #blog-detail {
+	.info-tab {
+		display: flex;
+	    text-transform: capitalize;
+	    margin-top: 10px;
+	    font-size: 14px;
+	    li {
+	    	padding-right: 25px;
+	    	a {
+	    		color: #919191;
+	    		letter-spacing: 0;
+	    	}
+	    }
+	}
+	.date {
+		display: inline-block;
+		background: #919191;
+		color: #f4f4f4;
+		text-align: center;
+		padding: 15px 20px;
+	}
+	.day {
+		font-size: 20px;
+	    font-weight: 700;
+	    line-height: 1;
+	}
+	.month {
+		text-transform: capitalize;
+	}
+	.title-bl {
+		display: inline-block;
+		margin-bottom: 15px;
+		h4 {
+			text-transform: uppercase;
+			letter-spacing: 0;
+			line-height: 1.5;
+		}
+		hr {
+			width: 50%;
+			border: 1.5px solid #494949;
+		}
+	}
 }
 /*header*/
 
@@ -111,6 +174,13 @@ h5, h6 {
 		margin: 15px 0 0 0;
 		padding: 0;
 		background-color: transparent;
+	}
+}
+.article-inner {
+	padding: 25px 0;
+	p {
+		margin: 15px 0;
+		line-height: 28px;
 	}
 }
 #footer {
@@ -185,6 +255,40 @@ h5, h6 {
 		}
 	}
 }
+#contact, #blog, #blog-detail {
+	#footer {
+		.title {
+			font-size: 15px;
+		    font-weight: 700;
+		    color: black;
+		}
+		.footer-list a {
+			color: #7f7f7f;
+			font-size: 12px;
+			font-weight: 500;
+		}
+		.contact {
+			text-align: right;
+			p {
+				display: inline-block;
+			}
+			.map {
+				margin-top: 60px;
+				i {
+					float: right;
+				}
+			}
+			.contact-info {
+				padding-top: 8px;
+			}
+		}
+		.payment-methods, .copyright {
+			float: none;
+			text-align: center;
+			padding-bottom: 15px;
+		}
+	}
+}
 
 /*media*/
 
@@ -201,7 +305,7 @@ h5, h6 {
 		    position: absolute;
 		    left: 0;
 		    right: 0;
-		    top: 15%;
+		    top: 126px;
 		    z-index: 10;
 		    background: #fff;
 		    padding: 30px;
