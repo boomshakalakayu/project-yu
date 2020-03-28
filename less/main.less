@@ -3,7 +3,11 @@
 @import "contact.less";
 @import "blog.less";
 @import "blog_detail.less";
+@import "product-detail.less";
+@import "product-list.less";
+
 /*custom*/
+
 hr {
 	margin: 0;
 }
@@ -42,6 +46,9 @@ h2, h3 {
 	font-weight: bold;
 	text-transform: uppercase;
 }
+h5, h6 {
+ 	text-transform: capitalize;
+}
 p {
 	font-size: 14px;
 	margin: 0;
@@ -79,57 +86,67 @@ button {
 		outline: none;
 	}
 }
-#blog, #blog-detail {
-	.info-tab {
-		display: flex;
-	    text-transform: capitalize;
-	    margin-top: 10px;
-	    font-size: 14px;
-	    li {
-	    	padding-right: 25px;
-	    	a {
-	    		color: #919191;
-	    		letter-spacing: 0;
-	    	}
-	    }
-	}
-	.date {
-		display: inline-block;
-		background: #919191;
-		color: #f4f4f4;
-		text-align: center;
-		padding: 15px 20px;
-	}
-	.day {
-		font-size: 20px;
-	    font-weight: 700;
-	    line-height: 1;
-	}
-	.month {
-		text-transform: capitalize;
-	}
-	.title-bl {
-		display: inline-block;
-		margin-bottom: 15px;
-		h4 {
-			text-transform: uppercase;
-			letter-spacing: 0;
-			line-height: 1.5;
-		}
-		hr {
-			width: 50%;
-			border: 1.5px solid #494949;
-		}
-	}
+.star {
+	display: flex;
+	font-size: 8px;
+   	color: #c8a760;
+   	li {
+   		padding-right: 2px;
+   	}
 }
+.shop-button .icon {
+    border: 1px solid;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.discount-tag, .new-tag {
+	display: inline-block;
+	color: #fff;
+	padding: 0 5px;
+	position: absolute;
+	font-weight: 500;
+	top: 10%;
+	text-transform: capitalize;
+}
+.discount {
+    text-decoration: line-through;
+    letter-spacing: 1px;
+}
+.price {
+	font-size: 27px;
+	letter-spacing: -2px;
+	font-weight: 500;
+}
+
 /*header*/
 
+.dark {
+	background: #282828;
+}
+.header-top {
+	.menu-right {
+		text-transform: capitalize;
+	}
+	a {
+		display: block;
+		padding: 12px 15px;
+		color: #a1a1a1;
+		transition: all 0.3s;
+		&:hover {
+			background-color: #3f3e43;
+		}
+	}
+}
+.cart-total {
+	line-height: 14px;
+	div {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 14px;
+	}
+}
 .menu {
 	display: none;
-}
-
-h5, h6 {
- 	text-transform: capitalize;
 }
 #logo {
 	.tel {
@@ -183,6 +200,112 @@ h5, h6 {
 		line-height: 28px;
 	}
 }
+
+/* content */
+
+.info-tab {
+	display: flex;
+    text-transform: capitalize;
+    margin-top: 10px;
+    font-size: 14px;
+    li {
+    	padding-right: 25px;
+    	a {
+    		color: #919191;
+    		letter-spacing: 0;
+    	}
+    }
+}
+#blog, #blog-detail {
+	.date {
+		display: inline-block;
+		background: #919191;
+		color: #f4f4f4;
+		text-align: center;
+		padding: 15px 20px;
+	}
+	.day {
+		font-size: 20px;
+	    font-weight: 700;
+	    line-height: 1;
+	}
+	.month {
+		text-transform: capitalize;
+	}
+	.title-bl {
+		display: inline-block;
+		margin-bottom: 15px;
+		h4 {
+			text-transform: uppercase;
+			letter-spacing: 0;
+			line-height: 1.5;
+		}
+		hr {
+			width: 50%;
+			border: 1.5px solid #494949;
+		}
+	}
+}
+.item {
+	position: relative;
+}
+.discount-tag {
+    background: #b2cc29;
+}
+.new-tag {
+	background: black;
+}
+.product-list {
+	.item:hover .cover {
+		opacity: 1;
+		transition: all .3s;
+	}
+	.cover {
+		opacity: 0;
+		position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    li {
+	    	flex-grow: 1;
+	        border: 1px solid #666;
+	    	background: #aaa;
+	        padding: 10px;
+	        &+li {
+	        	border-left: 0;
+	        }
+	    }
+	    button {
+	        text-align: center;
+	        border: 0;
+	        background: transparent;
+	        padding: 0;
+	        font-size: 14px;
+	    }
+	}
+	.star {
+		position: absolute;
+		bottom: 5%;
+	    left: 10%;
+	}
+	.row > div:nth-child(5) .new-tag {
+		top:calc(10% + 24px);
+	}
+	.info {
+		padding: 10px;
+	}
+	.price {
+		font-size: 20px;
+	}
+	.product-name {
+		margin: 0;
+		color: #757575;
+		letter-spacing: 0;
+		font-size: 14px;
+	}
+}
+/* footer */
+
 #footer {
 	color: #868686;
 	font-size: 14px;
@@ -289,10 +412,41 @@ h5, h6 {
 		}
 	}
 }
+#index, #product-list {
+	.footer-top {
+		.info-top {
+			padding-bottom: 30px;
+			.icon-item {
+				justify-content: center;
+				i {
+					font-size: 40px;
+			    	line-height: 44px;
+				}
+				h5 {
+					font-size: 15px;
+					text-transform: uppercase;
+					margin-bottom: 5px;
+				}
+			}
+			.icon-info {
+				margin-left: 10px;
+			}
+		}
+		.icon-item {
+			display: flex;
+		}
+		.info-bottom {
+			padding-top: 30px;
+		}
+	}
+}
 
 /*media*/
 
 @media ( max-width: 992px){
+	.dark, .cart-total {
+		display: none;
+	}
 	#logo {
 		.tel {
 			display: none;
@@ -317,5 +471,4 @@ h5, h6 {
 	.footer-top {
 		text-align: center;
 	}
-
 }

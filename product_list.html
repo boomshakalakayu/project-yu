@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>product-list</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/action.js"></script>
+
+</head>
+<body id="product-list">
+	<div id="header">
+		<div class="dark">
+			<div class="container">
+				<div class="header-top d-flex justify-content-between">
+					<div class="menu-left">
+						<ul class="d-flex">
+							<li><a href="tel:1-(555)-333-22-11"><i class="icon-phone"></i>+1 (555)333 22 11</a></li>
+							<li><a href="mailto:info@schon.chair"><i class="icon-mail"></i> info@schon.chair</a></li>
+						</ul>
+					</div>
+					<div class="menu-right">
+						<ul class="d-flex">
+							<li><a href="#">order track</a></li>
+							<li><a href="#">my account</a></li>
+							<li><a href="#">checkout</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="container">
+			<div class="d-flex justify-content-between py-5 position-relative">
+				<div id="logo">
+					<img src="img/logo.png">
+				</div>
+				<div id="nav">
+					<nav class="nav">
+						<a class="nav-link" href="index.html">HOME</a>
+						<a class="nav-link" href="#">PRODUCTS</a>
+						<a class="nav-link" href="blog.html">BLOG</a>
+						<a class="nav-link" href="about.html">ABOUT</a>
+						<a class="nav-link" href="contact.html">CONTACT</a>
+					</nav>
+					<ul class="nav-side d-flex">
+						<li><a class="nav-link" href="#"><i class="icon-search"></i></a></li>
+						<li class="d-flex">
+							<a class="nav-link" href="#"><i class="icon-shopping-bag cart"></i></a>
+							<div class="cart-total">
+								<div>shopping cart</div>
+								<span>3 items</span>
+								<span>$ 74.00</span>
+							</div>
+						</li>
+						<li>
+							<div class="menu">
+								<a href="#"><i class="icon-menu"></i></a>
+							</div>
+						</li>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="page-title text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>chairs</h2>
+						<nav aria-label="breadcrumb">
+						  <ol class="breadcrumb justify-content-center text-capitalize">
+						    <li class="breadcrumb-item"><a href="#index.html">Home</a></li>
+						    <li class="breadcrumb-item"><a href="#">product</a></li>
+						    <li class="breadcrumb-item active">chairs</li>
+						  </ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-menu">
+			<div class="bg-cover"></div>
+			<div class="filter-option">
+				<a href="#"><i class="icon-sliders"></i>Fliter</a>
+			</div>
+			<div class="categories-option">
+				<a href="#"><i class="icon-list"></i>Categories</a>
+			</div>
+		</div>
+		<div class="page-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 side">
+						<div class="filter">
+							<div class="close-menu  text-right"></div>
+							<h5 class="title">filter</h5>
+							<div class="filter-brands">
+								<div class="subtitle">Filter by Brands</div>
+								<ul>
+									<li class="options">
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="defaultCheck1">
+										  <label class="form-check-label" for="defaultCheck1">
+										    Casali
+										  </label>
+										</div>
+										<div>2</div>
+									</li>
+									<li class="options">
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="defaultCheck2">
+										  <label class="form-check-label" for="defaultCheck2">
+										    Decar
+										  </label>
+										</div>
+										<div>12</div>
+									</li>
+									<li class="options">
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="defaultCheck3">
+										  <label class="form-check-label" for="defaultCheck3">
+										    Fantini
+										  </label>
+										</div>
+										<div>4</div>
+									</li>
+									<li class="options">
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="defaultCheck4">
+										  <label class="form-check-label" for="defaultCheck4">
+										    Flamentstyle
+										  </label>
+										</div>
+										<div>4</div>
+									</li>
+									<li class="options">
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="defaultCheck5">
+										  <label class="form-check-label" for="defaultCheck5">
+										    Heerenhuis
+										  </label>
+										</div>
+										<div>6</div>
+									</li>
+									<li class="options">
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="defaultCheck6">
+										  <label class="form-check-label" for="defaultCheck6">
+										    Hoffmann
+										  </label>
+										</div>
+										<div>10</div>
+									</li>
+									<li class="options">
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="defaultCheck7">
+										  <label class="form-check-label" for="defaultCheck7">
+										    Italfloor
+										  </label>
+										</div>
+										<div>3</div>
+									</li>
+								</ul>
+							</div>
+							<hr>
+							<div class="price-range">
+								<div class="subtitle">Filter by Price</div>
+								<div class="slider-range"></div>
+								<input type="text" id="amount" readonly style="border:0; color:#494949; background: transparent;">
+							</div>
+							<button type="button" class="btn btn-dark btn-sm">Filter</button>
+						</div>
+						<div class="categories">
+							<div class="close-menu text-left"></div>
+							<h5 class="title">categories</h5>
+							<ul>
+								<li><a href="#">chairs</a><a href="#">12</a></li>
+								<li><a href="#">sofas</a><a href="#">24</a></li>
+								<li><a href="#">armchairs</a><a href="#">9</a></li>
+								<li><a href="#">bedroom</a><a href="#">2</a></li>
+								<li><a href="#">lighting</a><a href="#">17</a></li>
+								<li><a href="#">kitchen</a><a href="#">10</a></li>
+								<li><a href="#">accessories</a><a href="#">23</a></li>
+							</ul>
+						</div>
+						<div class="hot-sale">
+							<h5 class="title">hot sale</h5>
+							<ul class="hot-list">
+								<li>
+									<a href="#"><img src="https://fakeimg.pl/79x79/"></a>
+									<div class="product">
+										<div class="product-name">egon wooden chair</div>
+										<ul class="star">
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star-empty"></i></li>
+										</ul>
+										<span class="discount">$75.00</span>
+										<span class="price">$55,00</span>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="https://fakeimg.pl/79x79/"></a>
+									<div class="product">
+										<div class="product-name">oyo cantilever</div>
+										<ul class="star">
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star-empty"></i></li>
+										</ul>
+										<span class="discount">$75.00</span>
+										<span class="price">$55,00</span>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="https://fakeimg.pl/79x79/"></a>
+									<div class="product">
+										<div class="product-name">kurve chair</div>
+										<ul class="star">
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star-empty"></i></li>
+										</ul>
+										<span class="discount">$75.00</span>
+										<span class="price">$55,00</span>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="https://fakeimg.pl/79x79/"></a>
+									<div class="product">
+										<div class="product-name">marvelous wooden chair</div>
+										<ul class="star">
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star"></i></li>
+											<li><i class="icon-star-empty"></i></li>
+										</ul>
+										<span class="discount">$75.00</span>
+										<span class="price">$55,00</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="display-set">
+							<div class="results">
+								<div>Showing<span>1-9</span>of<span>65</span>results</div>
+								<div class="d-flex">
+									View
+									<ul class="view">
+										<li><a href="#">9</a></li>
+										<li><a href="#">18</a></li>
+										<li><a href="#">27</a></li>
+										<li><a href="#">All</a></li>
+									</ul>
+								</div>
+							</div>
+							<ul class="display-type">
+								<li class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+									    Dropdown button
+									  </button>
+									  <div class="dropdown-menu">
+									    <a class="dropdown-item" href="#">Action</a>
+									    <a class="dropdown-item" href="#">Another action</a>
+									    <a class="dropdown-item" href="#">Something else here</a>
+									  </div>
+								</li>
+								<li><button type="button" class="btn btn-outline-secondary"><i class="icon-th"></i></button></li>
+								<li><button type="button" class="btn btn-outline-secondary"><i class="icon-list"></i></button></li>
+							</ul>
+						</div>
+						<div class="product-content">
+							<div class="product-list">
+								<div class="row">
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img src="https://fakeimg.pl/213x213/ccc/ccc">
+											<ul class="star">
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star-empty"></i></li>
+											</ul>
+										</div>
+										<div class="info">
+											<h5 class="product-name">puff chair</h5>
+											<div class="price">€ 287,00</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img src="https://fakeimg.pl/213x213/ccc/ccc">
+										</div>
+										<div class="info mt_20">
+											<h5 class="product-name">puff chair</h5>
+											<div class="price">€ 287,00</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img src="https://fakeimg.pl/213x213/ccc/ccc">
+										</div>
+										<div class="discount-tag">15% Off</div>
+										<div class="info mt_20">
+											<h5 class="product-name">puff chair</h5>
+											<div class="price">€ 287,00</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img src="https://fakeimg.pl/213x213/ccc/ccc">
+											<ul class="star">
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star-empty"></i></li>
+											</ul>
+										</div>
+										<div class="info">
+											<h5 class="product-name">puff chair</h5>
+											<div class="price">€ 287,00</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img src="https://fakeimg.pl/213x213/ccc/ccc">
+											<ul class="star">
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star-empty"></i></li>
+											</ul>
+										</div>
+										<div class="info">
+											<h5 class="product-name">puff chair</h5>
+											<div class="price">€ 287,00</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img src="https://fakeimg.pl/213x213/ccc/ccc">
+										</div>
+										<div class="info mt_20">
+											<h5 class="product-name">puff chair</h5>
+											<div class="price">€ 287,00</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img src="https://fakeimg.pl/213x213/ccc/ccc">
+											<ul class="star">
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star-empty"></i></li>
+											</ul>
+										</div>
+										<div class="info">
+											<h5 class="product-name">puff chair</h5>
+											<div class="price">€ 287,00</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img src="https://fakeimg.pl/213x213/ccc/ccc">
+											<ul class="star">
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star"></i></li>
+												<li><i class="icon-star-empty"></i></li>
+											</ul>
+										</div>
+										<div class="info">
+											<h5 class="product-name">puff chair</h5>
+											<div class="price">€ 287,00</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img src="https://fakeimg.pl/213x213/ccc/ccc">
+										</div>
+										<div class="info mt_20">
+											<h5 class="product-name">puff chair</h5>
+											<div class="price">€ 287,00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pagination">
+							<ul class="pagination">
+							    <li class="page-item"><a class="page-link" href="#">1</a></li>
+							    <li class="page-item"><a class="page-link" href="#">2</a></li>
+							    <li class="page-item"><a class="page-link" href="#">3</a></li>
+							    <li class="page-item"><a class="page-link" href="#">4</a></li>
+							  </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="footer-top container">
+			<div class="row info-top">
+				<div class="col-lg-3">
+					<div class="icon-item">
+						<i class="icon-flight"></i>
+						<div class="icon-info">
+							<h5>free shipping</h5>
+							<p>Free shipping on all US order</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="icon-item">
+						<i class="icon-lifebuoy"></i>
+						<div class="icon-info">
+							<h5>support 24/7</h5>
+							<p>We support 24 hours a day</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="icon-item">
+						<i class="icon-gift"></i>
+						<div class="icon-info">
+							<h5>gift cards</h5>
+							<p>Give perfect gift</p>							
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="icon-item">
+						<i class="icon-money"></i>
+						<div class="icon-info">
+							<h5>payment 100% secure</h5>
+							<p>Payment 100% secure</p>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row info-bottom">
+				<div class="col-lg">
+					<img src="img/footer-logo.png">
+					<p class="my-4">Exercitation navlamco laboris nisi ut aliquip excommodo consequat. Duis aute irure</p>
+					<div class="map">
+						<i class="icon-location"></i>
+						<p>Connaugt Road Central Suite 18B, 148<br>New Yankee</p>
+					</div>
+					<div class="contact-info">
+						<div class="phone">
+							<i class="icon-phone"></i>
+							<a href="tel:1-(555)-333-22-11">+1 (555) 333 22 11</a>
+						</div>
+						<div class="mail">
+							<i class="icon-mail"></i>
+							<a href="mailto:info@schon.chair">info@schon.chair</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<h5>categories</h5>
+					<nav>
+						<li>chairs</li>
+						<li>sofas</li>
+						<li>living</li>
+						<li>bedroom</li>
+						<li>tables</li>
+						<li>new</li>
+					</nav>
+				</div>
+				<div class="col-lg-2">
+					<h5>information</h5>
+					<nav>
+						<li>about us</li>
+						<li>contact us</li>
+						<li>terms & conditions</li>
+						<li>privacy policy</li>
+						<li>customer service</li>
+						<li>FAQs</li>
+					</nav>
+				</div>
+				<div class="col-lg-2">
+					<h5>account</h5>
+					<nav>
+						<li>my account</li>
+						<li>order tracking</li>
+						<li>wish list</li>
+						<li>shopping cart</li>
+						<li>checkout</li>
+					</nav>
+				</div>
+				<div class="col-lg">
+					<div class="subscribe">
+						<div class="newsletter">
+							<h5>sing up newsletter</h5>
+							<p>Subscribe now to get 15% off<br>on any product</p>
+							<div class="input">
+								<input class="form-control" type="text" placeholder="your email">
+								<button class="button"><i class="icon-right-open-mini"></i></button>
+							</div>
+						</div>
+						
+						<div class="social-media">
+							<h5>follow us</h5>
+							<ul class="social-icon">
+								<li><a class="nav-link" href="#"><i class="icon-twitter"></i></a></li>
+								<li><a class="nav-link" href="#"><i class="icon-facebook"></i></a></li>
+								<li><a class="nav-link" href="#"><i class="icon-gplus"></i></a></li>
+								<li><a class="nav-link" href="#"><i class="icon-youtube"></i></a></li>
+								<li><a class="nav-link" href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a class="nav-link" href="#"><i class="icon-whatsapp"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="copyright">
+							&copy; <span class="font-weight-bold text-body">schön.</span>-All rights Reserved
+						</div>
+						<div class="payment-methods">
+							<img src="img/Payment-icon.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
