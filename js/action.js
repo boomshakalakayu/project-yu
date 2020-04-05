@@ -6,20 +6,14 @@ $(document).ready(function(e){
 		$('#header').find('.nav').toggleClass('active');
 	})
 
-	// slider range bar //
-
-	$('.slider-range').slider({
-		range: true,
-        min: 0,
-        max: 800,
-        values: [ 10, 599 ],
-        slide: function( event, ui ) {
-          $( "#amount" ).val( "Price $" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-        }
+	$('.cart').click(function(){
+		$('.cart-panel').addClass('show');
+		$('.bg-cover').fadeIn();		
 	})
-
-	$( "#amount" ).val( "Price $" + $( ".slider-range" ).slider( "values", 0 ) +
-	      " - $" + $( ".slider-range" ).slider( "values", 1 ) )
+	$('.bg-cover').click(function(){
+		$('.cart-panel').removeClass('show');
+		$('.bg-cover').fadeOut();
+	})
 
 	// side bar menu //
 

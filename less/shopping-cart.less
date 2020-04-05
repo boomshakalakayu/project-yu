@@ -1,0 +1,132 @@
+#shopping-cart {
+	.cart-datail {
+		margin-top: 80px;
+	}
+	.detail-head, .detail-list li {
+		border-bottom: 1px solid #eee;
+	}
+	.detail-head {
+		display: none;
+		padding: 15px 0;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 500;
+		color: #808080;
+	}
+	.detail-list {
+		li {
+			position: relative;
+			padding: 10px 0;
+			flex-direction: column;
+			& > div {
+				margin-bottom: 8px;
+				&:last-child {
+					position: absolute;
+					right: 0;
+				}
+			}
+		}
+		.row > div, .product-info a {
+			align-self: center;
+		}
+		.price {
+			font-size: 17px;
+			letter-spacing: -0.5px;
+		}
+	}
+	.product-info {
+		display: flex;
+		flex-direction: column;
+		.img {
+			display: none;
+			width: 25%;
+			margin-right: 40px;
+		}
+	}
+	.custom-select {
+		width: auto;
+		border: 0;
+		background-color: #eee;
+	}
+	.coupon {
+		display: flex;
+		justify-content: center;
+		margin: 40px 40px;
+		input {
+			width: 70%;
+			height: 35px;
+			font-size: 12px;
+			padding-left: 20px;
+		}
+		button {
+			background: #cba223;
+			color: white;
+			font-size: 14px;
+			font-weight: 500;
+			margin-left: 5px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	.cart-info {
+		margin-top: 60px;
+		margin-bottom: 120px;
+		.row > div {
+			margin-bottom: 20px;
+		}
+		form {
+			select {
+				width: 80%;
+				height: 40px;
+				font-size: 12px;
+				color: #7d7d7d;
+			}
+			button {
+				background: #f6f6f6;
+			    color: #c6c6c6;
+			    border-color: #c6c6c6;
+			    text-transform: uppercase;
+			    font-weight: 500;
+			    padding-left: 20px;
+			    padding-right: 20px;
+			}
+		}
+		.border {
+			border: 1px solid #dcdcdc;
+			padding: 18px 40px;
+		}
+	}
+	@media (min-width: 768px) {
+		.detail-head {
+			display: flex;
+		}
+		.detail-list {
+			li {
+				flex-direction: row;
+			}
+			.img {
+				display: block;
+			}
+			.product-info {
+				flex-direction: row;
+			}
+		}
+		.coupon {
+			input {
+				width: 20%;
+			}
+		}
+		.cart-info {
+			.row {
+				margin-left: -40px;
+				margin-right: -40px;
+			}
+			.col-md-6 {
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+		}
+	}
+	@media (min-width: 992px) {
+	}
+}
