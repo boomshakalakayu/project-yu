@@ -161,9 +161,8 @@ button {
 	display: none;
 	position: absolute;
 	z-index: 10;
-	width: 380px;
-	top: 40px;
-	right: 75px;
+	right: 0;
+	top: 125px;
 	&.show {
 		display: block;
 	}
@@ -622,6 +621,17 @@ button {
 }
 
 /*media*/
+
+@media (min-width: 768px) {
+	.nav-side li:nth-child(2) {
+		position: relative;	
+	}
+	.cart-panel {
+		width: 380px;
+	    top: 40px;
+	    right: 75px;
+	}
+}
 
 @media ( max-width: 992px){
 	.header-bar, .cart-total {
