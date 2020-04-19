@@ -22,4 +22,24 @@ $(document).ready(function(e){
 		centerMode: true,
 		focusOnSelect: true
 	})
+
+	$('.productListSlide').slick({
+		arrows: false,
+	});
+
+	$('.prev').click(function(){
+		$(this).closest('.product-list').find('.productListSlide').slick('slickPrev');
+	})
+
+	$('.next').click(function(){
+		$(this).closest('.product-list').find('.productListSlide').slick('slickNext');
+	})
+
+	// $('.feature .prev').click(function(){
+	// 	$('.productListSlide').slick('slickPrev');
+	// })
+
+	// $('.feature .next').click(function(){
+	// 	$('.productListSlide').slick('slickNext');
+	// })
 })	
