@@ -63,4 +63,10 @@ $(document).ready(function(e){
 			$(this).toggleClass('btn-tap');			
 		}
 	})
+
+	//delete button
+
+	$('.delete').on('click', function(){
+		$(this).closest('li').remove();
+	})
 });

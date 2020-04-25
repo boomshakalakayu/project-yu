@@ -17,17 +17,13 @@
 		li {
 			position: relative;
 			padding: 10px 0;
-			flex-direction: column;
 			& > div {
-				margin-bottom: 8px;
+				align-self: center;
 				&:last-child {
 					position: absolute;
-					right: 0;
+					right: 15px;
 				}
 			}
-		}
-		.row > div, .product-info a {
-			align-self: center;
 		}
 		.price {
 			font-size: 17px;
@@ -38,7 +34,6 @@
 		display: flex;
 		flex-direction: column;
 		.img {
-			display: none;
 			width: 25%;
 			margin-right: 40px;
 		}
@@ -98,17 +93,36 @@
 	}
 	@media (min-width: 768px) {
 		.detail-head {
-			display: flex;
+			display: block;
+		}
+		.detail-head .row > .col-md-6 {
+			div:first-child {
+				flex:0 0 33.33%;
+			}
+			div:nth-child(2) {
+				flex: 0 0 30%;
+			}
+			div:last-child {
+				flex: 0 0 16.66%;
+			}
+		}
+		.detail-head .row > div, .detail-list li > div {
+			&:nth-child(2) {
+				display: flex;
+			}
 		}
 		.detail-list {
-			li {
-				flex-direction: row;
+			.product-img {
+				width: 80%;
 			}
-			.img {
-				display: block;
+			.product-name {
+				flex: 0 0 33.333%;
 			}
-			.product-info {
-				flex-direction: row;
+			.price {
+				flex: 0 0 25%;
+			}
+			.quantity-select {
+				flex: 0 0 16.666%
 			}
 		}
 		.coupon {
@@ -126,7 +140,5 @@
 				padding-right: 40px;
 			}
 		}
-	}
-	@media (min-width: 992px) {
 	}
 }
