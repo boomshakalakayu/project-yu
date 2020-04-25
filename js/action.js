@@ -64,9 +64,14 @@ $(document).ready(function(e){
 		}
 	})
 
-	//delete button
+	//delete and cancel button
 
 	$('.delete').on('click', function(){
 		$(this).closest('li').remove();
+	})
+
+	$('.close-search').click(function(){
+		$('.search-panel').fadeOut();
+		$('body').toggleClass('hidden-scroll');
 	})
 });
