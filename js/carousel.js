@@ -2,7 +2,7 @@ $(document).ready(function(e){
 	// workspace carousel
 
 	$('.aboutSlide').slick({
-		autoplay: true,
+		// autoplay: true,
 		dots: true,
 	});
 
